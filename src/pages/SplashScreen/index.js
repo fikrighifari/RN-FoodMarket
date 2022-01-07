@@ -12,6 +12,7 @@ const SplashScreen = () => {
         alignItems: 'center',
       }}>
       <Logo />
+      <View style={{height:20}}/>
       <Text
         style={{
           fontSize: 32,
