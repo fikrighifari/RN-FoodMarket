@@ -11,13 +11,14 @@ import {
   SplashScreen,
   SuccessSignUp,
 } from '../pages';
+import { ButtomNavBar } from '../components';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const MainApp = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator tabBar={props => <ButtomNavBar {...props} />} >
       <Tab.Screen name="Home" component={Home} options={{headerShown: false}} />
       <Tab.Screen
         name="Order"
