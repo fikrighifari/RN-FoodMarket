@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View, TextInput as TextInputRN } from 'react-native'
 
-const TextInput = () => {
+const TextInput = ({label, placeHolder}) => {
     return (
         <View>
-            <Text style={styles.label}>Email Address</Text>
-            <TextInputRN placeholder='Type your email address' style={styles.input}/>
+            <Text style={styles.label}>{label}</Text>
+            <TextInputRN placeholder={placeHolder} style={styles.input}/>
         </View>
     )
 }

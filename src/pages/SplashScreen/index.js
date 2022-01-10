@@ -1,8 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {View, Text, ScrollView} from 'react-native';
 import {Logo} from '../../assets';
 
-const SplashScreen = () => {
+const SplashScreen = ({navigation}) => {
+  useEffect(() => {
+    setTimeout(() => {
+        navigation.replace('SignIn')
+    }, 2000);
+  });
   return (
     <View
       style={{
@@ -12,7 +17,7 @@ const SplashScreen = () => {
         alignItems: 'center',
       }}>
       <Logo />
-      <View style={{height:20}}/>
+      <View style={{height: 20}} />
       <Text
         style={{
           fontSize: 32,
