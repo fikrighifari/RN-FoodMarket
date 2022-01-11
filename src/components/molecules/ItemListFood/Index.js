@@ -1,7 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
-import {FoodDummy1} from '../../../assets';
-import {Rating} from '..';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import { Rating } from '..';
 
 const ItemListFood = ({image}) => {
   return (

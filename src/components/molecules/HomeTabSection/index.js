@@ -15,7 +15,13 @@ const renderTabBar = props => (
       // width: '15%'
       //   marginLeft: '3%',
     }}
-    style={{backgroundColor: 'white'}}
+    style={{
+      backgroundColor: 'white',
+      elevation: 0,
+      shadowOpacity: 0,
+      borderBottomColor: '#F2F2F2',
+      borderBottomWidth: 1,
+    }}
     tabStyle={{width: 'auto'}}
     renderLabel={({route, focused, color}) => (
       <Text
@@ -45,34 +51,34 @@ const NewTaste = () => {
 };
 
 const Popular = () => {
-    return (
-      <ScrollView>
-        <View style={{paddingTop: 8}}>
-          <ItemListFood image={FoodDummy3} />
-          <ItemListFood image={FoodDummy2} />
-          <ItemListFood image={FoodDummy1} />
-          <ItemListFood image={FoodDummy3} />
-          <ItemListFood image={FoodDummy2} />
-          <ItemListFood image={FoodDummy1} />
-        </View>
-      </ScrollView>
-    );
-  };
+  return (
+    <ScrollView>
+      <View style={{paddingTop: 8}}>
+        <ItemListFood image={FoodDummy3} />
+        <ItemListFood image={FoodDummy2} />
+        <ItemListFood image={FoodDummy1} />
+        <ItemListFood image={FoodDummy3} />
+        <ItemListFood image={FoodDummy2} />
+        <ItemListFood image={FoodDummy1} />
+      </View>
+    </ScrollView>
+  );
+};
 
-  const Recommended = () => {
-    return (
-      <ScrollView>
-        <View style={{paddingTop: 8}}>
-          <ItemListFood image={FoodDummy2} />
-          <ItemListFood image={FoodDummy1} />
-          <ItemListFood image={FoodDummy3} />
-          <ItemListFood image={FoodDummy2} />
-          <ItemListFood image={FoodDummy1} />
-          <ItemListFood image={FoodDummy3} />
-        </View>
-      </ScrollView>
-    );
-  };
+const Recommended = () => {
+  return (
+    <ScrollView>
+      <View style={{paddingTop: 8}}>
+        <ItemListFood image={FoodDummy2} />
+        <ItemListFood image={FoodDummy1} />
+        <ItemListFood image={FoodDummy3} />
+        <ItemListFood image={FoodDummy2} />
+        <ItemListFood image={FoodDummy1} />
+        <ItemListFood image={FoodDummy3} />
+      </View>
+    </ScrollView>
+  );
+};
 
 const renderScene = SceneMap({
   first: NewTaste,
@@ -96,6 +102,7 @@ const HomeTabSection = () => {
       renderScene={renderScene}
       onIndexChange={setIndex}
       initialLayout={{width: layout.width}}
+      style={{backgroundColor:'white'}}
     />
   );
 };
