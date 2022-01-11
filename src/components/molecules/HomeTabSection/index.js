@@ -1,7 +1,10 @@
 import React from 'react';
-import {StyleSheet, Text, View, useWindowDimensions} from 'react-native';
+import {StyleSheet, Text, View, useWindowDimensions, Image} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
+import {ItemListFood} from '..';
+import {FoodDummy1, FoodDummy2, FoodDummy3} from '../../../assets';
 
 const renderTabBar = props => (
   <TabBar
@@ -26,16 +29,55 @@ const renderTabBar = props => (
   />
 );
 
-const FirstRoute = () => <View style={{flex: 1, backgroundColor: '#ff4081'}} />;
+const NewTaste = () => {
+  return (
+    <ScrollView>
+      <View style={{paddingTop: 8}}>
+        <ItemListFood image={FoodDummy1} />
+        <ItemListFood image={FoodDummy2} />
+        <ItemListFood image={FoodDummy3} />
+        <ItemListFood image={FoodDummy1} />
+        <ItemListFood image={FoodDummy2} />
+        <ItemListFood image={FoodDummy3} />
+      </View>
+    </ScrollView>
+  );
+};
 
-const SecondRoute = () => (
-  <View style={{flex: 1, backgroundColor: '#673ab7'}} />
-);
+const Popular = () => {
+    return (
+      <ScrollView>
+        <View style={{paddingTop: 8}}>
+          <ItemListFood image={FoodDummy3} />
+          <ItemListFood image={FoodDummy2} />
+          <ItemListFood image={FoodDummy1} />
+          <ItemListFood image={FoodDummy3} />
+          <ItemListFood image={FoodDummy2} />
+          <ItemListFood image={FoodDummy1} />
+        </View>
+      </ScrollView>
+    );
+  };
+
+  const Recommended = () => {
+    return (
+      <ScrollView>
+        <View style={{paddingTop: 8}}>
+          <ItemListFood image={FoodDummy2} />
+          <ItemListFood image={FoodDummy1} />
+          <ItemListFood image={FoodDummy3} />
+          <ItemListFood image={FoodDummy2} />
+          <ItemListFood image={FoodDummy1} />
+          <ItemListFood image={FoodDummy3} />
+        </View>
+      </ScrollView>
+    );
+  };
 
 const renderScene = SceneMap({
-  first: FirstRoute,
-  second: SecondRoute,
-  third: FirstRoute,
+  first: NewTaste,
+  second: Popular,
+  third: Recommended,
 });
 
 const HomeTabSection = () => {
