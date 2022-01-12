@@ -9,7 +9,7 @@ import {
 } from '../../components/molecules';
 import {Button} from '../../components/atoms';
 
-const OrderSummary = () => {
+const OrderSummary = ({navigation}) => {
   return (
     <View>
       <Header
@@ -24,7 +24,11 @@ const OrderSummary = () => {
         <ItemValue label={'Cherry Healthy'} value={'IDR 18.390.000'} />
         <ItemValue label={'Driver'} value={'IDR 50.000'} />
         <ItemValue label={'Tax 10%'} value={'IDR 1.800.390'} />
-        <ItemValue label={'Total Price'} value={'IDR 390.803.000'} />
+        <ItemValue
+          label={'Total Price'}
+          value={'IDR 390.803.000'}
+          valueColor="#1ABC9C"
+        />
       </View>
       <View style={styles.content}>
         <Text style={styles.label}>Deliver to:</Text>
@@ -35,7 +39,10 @@ const OrderSummary = () => {
         <ItemValue label={'City'} value={'Bandung'} />
       </View>
       <View style={styles.button}>
-        <Button text={'Checkout Now'} />
+        <Button
+          text={'Checkout Now'}
+          onPress={() => navigation.replace('SuccessOrder')}
+        />
       </View>
     </View>
   );
@@ -48,7 +55,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingTop: 14,
     paddingHorizontal: 24,
-    marginTop:24
+    marginTop: 24,
   },
   label: {
     fontFamily: 'Poppins-Regular',
@@ -56,8 +63,8 @@ const styles = StyleSheet.create({
     color: '#020202',
     marginBottom: 8,
   },
-  button:{
-      paddingHorizontal:24,
-      marginTop:24
-  }
+  button: {
+    paddingHorizontal: 24,
+    marginTop: 24,
+  },
 });
