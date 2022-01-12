@@ -5,8 +5,11 @@ import IcHome from './ic_home.svg';
 import IcHomeNormal from './ic_home_normal.svg';
 import IcProfile from './ic_profile.svg';
 import IcProfileNormal from './ic_profile_normal.svg';
-import IcStarOn from './ic_star_on.svg'
-import IcStarOff from './ic_star_off.svg'
+import IcStarOn from './ic_star_on.svg';
+import IcStarOff from './ic_star_off.svg';
+import IcBackWhite from './ic_back_white.svg';
+import IcMin from './ic_min.svg';
+import IcAdd from './ic_add.svg';
 
 export {
   IcBack,
@@ -17,5 +20,8 @@ export {
   IcProfile,
   IcProfileNormal,
   IcStarOn,
-  IcStarOff
+  IcStarOff,
+  IcBackWhite,
+  IcMin,
+  IcAdd,
 };
