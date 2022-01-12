@@ -40,7 +40,7 @@ const NewTaste = () => {
   const navigation = useNavigation();
   return (
     <ScrollView>
-      <View style={{paddingTop: 8}}>
+      <View style={{paddingTop: 8, paddingHorizontal:24}}>
         <ItemListFood
           rating={3}
           image={FoodDummy1}
@@ -80,7 +80,7 @@ const Popular = () => {
   const navigation = useNavigation();
   return (
     <ScrollView>
-      <View style={{paddingTop: 8}}>
+      <View style={{paddingTop: 8, paddingHorizontal:24}}>
         <ItemListFood
           rating={3}
           image={FoodDummy3}
@@ -120,7 +120,7 @@ const Recommended = () => {
   const navigation = useNavigation();
   return (
     <ScrollView>
-      <View style={{paddingTop: 8}}>
+      <View style={{paddingTop: 8, paddingHorizontal:24}}>
         <ItemListFood
           rating={3}
           image={FoodDummy2}

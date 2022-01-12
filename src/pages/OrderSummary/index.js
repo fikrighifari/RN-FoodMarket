@@ -26,7 +26,7 @@ const OrderSummary = () => {
         <ItemValue label={'Tax 10%'} value={'IDR 1.800.390'} />
         <ItemValue label={'Total Price'} value={'IDR 390.803.000'} />
       </View>
-      <View>
+      <View style={styles.content}>
         <Text style={styles.label}>Deliver to:</Text>
         <ItemValue label={'Name'} value={'Daenerys Targaryen'} />
         <ItemValue label={'Phone No.'} value={'0822 0819 9688'} />
@@ -34,7 +34,7 @@ const OrderSummary = () => {
         <ItemValue label={'House No.'} value={'A5 Hook'} />
         <ItemValue label={'City'} value={'Bandung'} />
       </View>
-      <View>
+      <View style={styles.button}>
         <Button text={'Checkout Now'} />
       </View>
     </View>
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingTop: 14,
     paddingHorizontal: 24,
+    marginTop:24
   },
   label: {
     fontFamily: 'Poppins-Regular',
@@ -55,4 +56,8 @@ const styles = StyleSheet.create({
     color: '#020202',
     marginBottom: 8,
   },
+  button:{
+      paddingHorizontal:24,
+      marginTop:24
+  }
 });
