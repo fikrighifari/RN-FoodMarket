@@ -10,7 +10,7 @@ import {FoodDummy1, IcBackWhite} from '../../assets';
 import {Button, Gap} from '../../components/atoms/';
 import {Counter, Rating} from '../../components/molecules';
 
-const FoodDetail = () => {
+const FoodDetail = ({navigation}) => {
   return (
     <View style={styles.page}>
       <ImageBackground source={FoodDummy1} style={styles.coverImage}>
@@ -25,7 +25,7 @@ const FoodDetail = () => {
               <Text style={styles.foodTitle}>BurgerKing</Text>
               <Rating />
             </View>
-            <Counter/>
+            <Counter />
           </View>
           <Gap height={14} />
           <Text style={styles.foodDescription}>
@@ -46,7 +46,10 @@ const FoodDetail = () => {
             <Text style={styles.labelPrice}>IDR 12.289.000</Text>
           </View>
           <View style={styles.button}>
-            <Button text={'Order Now'} />
+            <Button
+              text={'Order Now'}
+              onPress={() => navigation.navigate('OrderSummary')}
+            />
           </View>
         </View>
       </View>
@@ -79,8 +82,8 @@ const styles = StyleSheet.create({
     marginTop: -40,
     flex: 1,
   },
-  mainContent:{
-      flex:1
+  mainContent: {
+    flex: 1,
   },
   productContent: {
     flexDirection: 'row',
@@ -109,8 +112,8 @@ const styles = StyleSheet.create({
   footer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingVertical:16,
-    alignItems:'center'
+    paddingVertical: 16,
+    alignItems: 'center',
   },
   labelPrice: {
     fontFamily: 'Poppins-Regular',
@@ -122,7 +125,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#020202',
   },
-  button:{
-      width:163
-  }
+  button: {
+    width: 163,
+  },
 });

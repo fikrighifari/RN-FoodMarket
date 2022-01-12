@@ -1,14 +1,58 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import {StyleSheet, Text, View, Image} from 'react-native';
+import {FoodDummy3} from '../../assets';
+import {
+  ButtomNavBar,
+  Header,
+  ItemListFood,
+  ItemValue,
+} from '../../components/molecules';
+import {Button} from '../../components/atoms';
 
 const OrderSummary = () => {
-    return (
-        <View>
-            <Text>Order Summay Page</Text>
-        </View>
-    )
-}
+  return (
+    <View>
+      <Header
+        title={'Payment'}
+        subTitle={'You deserve better meal'}
+        onBack={() => {}}
+      />
+      <View style={styles.content}>
+        <Text style={styles.label}>Item Ordered</Text>
+        <ItemListFood image={FoodDummy3} items={14} />
+        <Text style={styles.label}>Detail Transaction</Text>
+        <ItemValue label={'Cherry Healthy'} value={'IDR 18.390.000'} />
+        <ItemValue label={'Driver'} value={'IDR 50.000'} />
+        <ItemValue label={'Tax 10%'} value={'IDR 1.800.390'} />
+        <ItemValue label={'Total Price'} value={'IDR 390.803.000'} />
+      </View>
+      <View>
+        <Text style={styles.label}>Deliver to:</Text>
+        <ItemValue label={'Name'} value={'Daenerys Targaryen'} />
+        <ItemValue label={'Phone No.'} value={'0822 0819 9688'} />
+        <ItemValue label={'Address'} value={'Winterfell'} />
+        <ItemValue label={'House No.'} value={'A5 Hook'} />
+        <ItemValue label={'City'} value={'Bandung'} />
+      </View>
+      <View>
+        <Button text={'Checkout Now'} />
+      </View>
+    </View>
+  );
+};
 
-export default OrderSummary
+export default OrderSummary;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  content: {
+    backgroundColor: 'white',
+    paddingTop: 14,
+    paddingHorizontal: 24,
+  },
+  label: {
+    fontFamily: 'Poppins-Regular',
+    fontSize: 14,
+    color: '#020202',
+    marginBottom: 8,
+  },
+});
