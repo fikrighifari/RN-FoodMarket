@@ -20,12 +20,12 @@ const SuccessOrder = ({navigation}) => {
           text={'Order Other Foods'}
           onPress={() => navigation.navigate('MainApp')}
         />
-        <Gap height={12}/>
+        <Gap height={12} />
         <Button
           text={'View My Order'}
-          textColor='white'
+          textColor="white"
           color="#8D92A3"
-          onPress={() => navigation.navigate('MainApp',{screen: 'Order'})}
+          onPress={() => navigation.navigate('MainApp', {screen: 'Order'})}
         />
       </View>
     </View>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#8D92A3',
   },
-  buttonContainer:{
-      width:200
-  }
+  buttonContainer: {
+    width: 200,
+  },
 });

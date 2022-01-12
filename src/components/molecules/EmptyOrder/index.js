@@ -1,9 +1,11 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Button, Gap } from '../..';
-import { IlEmptyOrder } from '../../../assets';
+import {StyleSheet, Text, View} from 'react-native';
+import {Button, Gap} from '../..';
+import {IlEmptyOrder} from '../../../assets';
 
-const EmptyOrder = ({navigation}) => {
+const EmptyOrder = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.page}>
       <IlEmptyOrder />
@@ -30,7 +32,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor:'white',
+    backgroundColor: 'white',
   },
   title: {
     fontSize: 20,
