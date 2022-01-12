@@ -25,7 +25,7 @@ const SuccessOrder = ({navigation}) => {
           text={'View My Order'}
           textColor='white'
           color="#8D92A3"
-          onPress={() => navigation.navigate('MainApp')}
+          onPress={() => navigation.navigate('MainApp',{screen: 'Order'})}
         />
       </View>
     </View>
