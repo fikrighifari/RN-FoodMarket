@@ -1,13 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import {FoodDummy3} from '../../assets';
-import {
-  ButtomNavBar,
-  Header,
-  ItemListFood,
-  ItemValue,
-} from '../../components/molecules';
 import {Button} from '../../components/atoms';
+import {Header, ItemListFood, ItemValue} from '../../components/molecules';
 
 const OrderSummary = ({navigation}) => {
   return (
@@ -19,7 +14,7 @@ const OrderSummary = ({navigation}) => {
       />
       <View style={styles.content}>
         <Text style={styles.label}>Item Ordered</Text>
-        <ItemListFood image={FoodDummy3} items={14} />
+        <ItemListFood image={FoodDummy3} items={14} type="order-summary" foodName="Pasta la Vista" price="45.000" />
         <Text style={styles.label}>Detail Transaction</Text>
         <ItemValue label={'Cherry Healthy'} value={'IDR 18.390.000'} />
         <ItemValue label={'Driver'} value={'IDR 50.000'} />

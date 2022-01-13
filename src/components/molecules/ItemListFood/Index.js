@@ -5,12 +5,13 @@ import {Rating} from '..';
 const ItemListFood = ({
   image,
   onPress,
-  items,
   rating,
-  inProgress,
-  orderItems,
-  totalOrder,
+  items,
+  price,
   type,
+  foodName,
+  date,
+  status,
 }) => {
   const renderContent = () => {
     switch (type) {
@@ -19,10 +20,10 @@ const ItemListFood = ({
         return (
           <>
             <View style={styles.content}>
-              <Text style={styles.foodTitle}>Smoothies Bowl</Text>
-              <Text style={styles.foodPrice}>IDR 50.0000</Text>
+              <Text style={styles.foodTitle}>{foodName}</Text>
+              <Text style={styles.foodPrice}>IDR {price}</Text>
             </View>
-            <Rating />
+            <Rating rating={rating} />
           </>
         );
       case 'order-summary':
@@ -30,8 +31,8 @@ const ItemListFood = ({
         return (
           <>
             <View style={styles.content}>
-              <Text style={styles.foodTitle}>Smoothies Bowl</Text>
-              <Text style={styles.foodPrice}>IDR 50.0000</Text>
+              <Text style={styles.foodTitle}>{foodName}</Text>
+              <Text style={styles.foodPrice}>IDR {price}</Text>
             </View>
             <Text style={styles.items}>{items} items</Text>
           </>
@@ -41,9 +42,9 @@ const ItemListFood = ({
         return (
           <>
             <View style={styles.content}>
-              <Text style={styles.foodTitle}>Smoothies Bowl</Text>
+              <Text style={styles.foodTitle}>{foodName}</Text>
               <Text style={styles.foodPrice}>
-                {orderItems} items • IDR {totalOrder}
+                {items} items • IDR {price}
               </Text>
             </View>
           </>
@@ -53,14 +54,14 @@ const ItemListFood = ({
         return (
           <>
             <View style={styles.content}>
-              <Text style={styles.foodTitle}>Smoothies Bowl</Text>
+              <Text style={styles.foodTitle}>{foodName}</Text>
               <Text style={styles.foodPrice}>
-                {orderItems} items • IDR {totalOrder}
+                {items} items • IDR {price}
               </Text>
             </View>
             <View>
-              <Text>Tanggal</Text>
-              <Text>Status</Text>
+              <Text style={styles.date}>{date}</Text>
+              <Text style={styles.status}>{status}</Text>
             </View>
           </>
         );
@@ -69,8 +70,8 @@ const ItemListFood = ({
         return (
           <>
             <View style={styles.content}>
-              <Text style={styles.foodTitle}>Smoothies Bowl</Text>
-              <Text style={styles.foodPrice}>IDR 50.0000</Text>
+              <Text style={styles.foodTitle}>{foodName}</Text>
+              <Text style={styles.foodPrice}>IDR {price}</Text>
             </View>
             <Rating />
           </>
@@ -123,4 +124,14 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: '#8D92A3',
   },
+  date:{
+    fontFamily:'Poppins-Regular',
+    fontSize:10,
+    color:'#8D92A3'
+  },
+  status:{
+    fontFamily:'Poppins-Regular',
+    fontSize:10,
+    color:'#D9435E'
+  }
 });

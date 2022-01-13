@@ -42,31 +42,49 @@ const NewTaste = () => {
     <ScrollView>
       <View style={{paddingTop: 8, paddingHorizontal:24}}>
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy3}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy3}
           onPress={() => navigation.navigate('FoodDetail')}
@@ -82,31 +100,49 @@ const Popular = () => {
     <ScrollView>
       <View style={{paddingTop: 8, paddingHorizontal:24}}>
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy3}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy3}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
@@ -122,31 +158,49 @@ const Recommended = () => {
     <ScrollView>
       <View style={{paddingTop: 8, paddingHorizontal:24}}>
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy3}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy2}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
         />
         <ItemListFood
+        type="product"
+        foodName="Soto Babat"
+        price="10.000"
           rating={3}
           image={FoodDummy3}
           onPress={() => navigation.navigate('FoodDetail')}
