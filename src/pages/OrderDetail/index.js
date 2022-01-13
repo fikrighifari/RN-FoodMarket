@@ -5,7 +5,7 @@ import {Gap} from '../../components';
 import {Button} from '../../components/atoms';
 import {Header, ItemListFood, ItemValue} from '../../components/molecules';
 
-const OrderDetail = () => {
+const OrderDetail = ({navigation}) => {
   return (
     <ScrollView>
       <Header

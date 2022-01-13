@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {EmptyOrder} from '../../components/molecules';
-import { Header, OrderTabSection } from '../../components';
+import React, { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Header, OrderTabSection, ProfileTabSection } from '../../components';
+import { EmptyOrder } from '../../components/molecules';
 
 const Order = () => {
   const [isEmpty] = useState(false);
@@ -14,6 +14,7 @@ const Order = () => {
           <Header title={'Your Orders'} subTitle={'Wait for the best meal'}/>
           <View style={styles.tabContainer}>
             <OrderTabSection/>
+            {/* <ProfileTabSection/> */}
           </View>
         </View>
       )}
