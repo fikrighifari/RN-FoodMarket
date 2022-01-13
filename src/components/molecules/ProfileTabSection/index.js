@@ -1,11 +1,10 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import {StyleSheet, Text, View, useWindowDimensions, Image} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
+import { StyleSheet, Text, useWindowDimensions, View } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import { SceneMap, TabBar, TabView } from 'react-native-tab-view';
+import { ItemListMenu } from '..';
 
-import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
-import {ItemListFood} from '..';
-import {FoodDummy1, FoodDummy2, FoodDummy3} from '../../../assets';
-import {useNavigation} from '@react-navigation/native';
 
 const renderTabBar = props => (
   <TabBar
@@ -41,34 +40,10 @@ const Account = () => {
   return (
     <ScrollView>
       <View style={{paddingTop: 8, paddingHorizontal: 24}}>
-        <ItemListFood
-          rating={3}
-          image={FoodDummy1}
-          onPress={() => navigation.navigate('OrderDetail')}
-          type="in-progress"
-          items={4}
-          price="100.000"
-          foodName="Seblak"
-        />
-        <ItemListFood
-          rating={3}
-          image={FoodDummy2}
-          onPress={() => navigation.navigate('OrderDetail')}
-          type="in-progress"
-          items={4}
-          price="50.000"
-          foodName="Nasgor"
-        />
-        <ItemListFood
-          rating={3}
-          image={FoodDummy3}
-          onPress={() => navigation.navigate('OrderDetail')}
-          type="in-progress"
-          items={4}
-          price="100.000"
-          foodName="BUrger"
-        />
-        
+        <ItemListMenu text='Edit Profile'/>
+        <ItemListMenu text='Home Address'/>
+        <ItemListMenu text='Security'/>
+        <ItemListMenu text='Payments'/>
       </View>
     </ScrollView>
   );
@@ -79,48 +54,10 @@ const FoodMarket = () => {
   return (
     <ScrollView>
       <View style={{paddingTop: 8, paddingHorizontal: 24}}>
-        <ItemListFood
-          rating={3}
-          image={FoodDummy3}
-          onPress={() => navigation.navigate('OrderDetail')}
-          type="past-orders"
-          items={4}
-          price="100.000"
-          foodName="Rujak"
-          date="Jun 12, 14:00"
-          status="Cancelled"
-        />
-        <ItemListFood
-          rating={3}
-          image={FoodDummy2}
-          onPress={() => navigation.navigate('OrderDetail')}
-          type="past-orders"
-          items={4}
-          price="100.000"
-          foodName="Rujak"
-          date="Jun 12, 14:00"
-        />
-        <ItemListFood
-          rating={3}
-          image={FoodDummy1}
-          onPress={() => navigation.navigate('OrderDetail')}
-          type="past-orders"
-          items={4}
-          price="100.000"
-          foodName="Rujak"
-          date="Jun 12, 14:00"
-          status="Cancelled"
-        />
-        <ItemListFood
-          rating={3}
-          image={FoodDummy3}
-          onPress={() => navigation.navigate('OrderDetail')}
-          type="past-orders"
-          items={4}
-          price="100.000"
-          foodName="Rujak"
-          date="Jun 12, 14:00"
-        />
+      <ItemListMenu text='Rate App'/>
+      <ItemListMenu text='Help Center'/>
+      <ItemListMenu text='Privacy & Policy'/>
+      <ItemListMenu text='Term & Conditions'/>
         
       </View>
     </ScrollView>
@@ -148,6 +85,7 @@ const ProfileTabSection = () => {
       onIndexChange={setIndex}
       initialLayout={{width: layout.width}}
       style={{backgroundColor: 'white'}}
+      
     />
   );
 };
