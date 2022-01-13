@@ -4,7 +4,7 @@ import {FoodDummy3} from '../../assets';
 import {Button} from '../../components/atoms';
 import {Header, ItemListFood, ItemValue} from '../../components/molecules';
 
-const OrderSummary = ({navigation}) => {
+const OrderDetail = () => {
   return (
     <View>
       <Header
@@ -49,7 +49,7 @@ const OrderSummary = ({navigation}) => {
   );
 };
 
-export default OrderSummary;
+export default OrderDetail;
 
 const styles = StyleSheet.create({
   content: {

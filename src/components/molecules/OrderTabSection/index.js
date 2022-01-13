@@ -44,7 +44,7 @@ const InProgress = () => {
         <ItemListFood
           rating={3}
           image={FoodDummy1}
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
           type="in-progress"
           items={4}
           price="100.000"
@@ -53,7 +53,7 @@ const InProgress = () => {
         <ItemListFood
           rating={3}
           image={FoodDummy2}
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
           type="in-progress"
           items={4}
           price="50.000"
@@ -62,39 +62,13 @@ const InProgress = () => {
         <ItemListFood
           rating={3}
           image={FoodDummy3}
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
           type="in-progress"
           items={4}
           price="100.000"
           foodName="BUrger"
         />
-        <ItemListFood
-          rating={3}
-          image={FoodDummy1}
-          onPress={() => navigation.navigate('FoodDetail')}
-          type="in-progress"
-          items={4}
-          price="10.000"
-          foodName="Permen Yosan"
-        />
-        <ItemListFood
-          rating={3}
-          image={FoodDummy2}
-          onPress={() => navigation.navigate('FoodDetail')}
-          type="in-progress"
-          items={4}
-          price="7500"
-          foodName="Cimol"
-        />
-        <ItemListFood
-          rating={3}
-          image={FoodDummy3}
-          onPress={() => navigation.navigate('FoodDetail')}
-          type="in-progress"
-          items={4}
-          price="100.000"
-          foodName="Rujak"
-        />
+        
       </View>
     </ScrollView>
   );
@@ -108,7 +82,7 @@ const PastOrder = () => {
         <ItemListFood
           rating={3}
           image={FoodDummy3}
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
           type="past-orders"
           items={4}
           price="100.000"
@@ -119,7 +93,7 @@ const PastOrder = () => {
         <ItemListFood
           rating={3}
           image={FoodDummy2}
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
           type="past-orders"
           items={4}
           price="100.000"
@@ -129,7 +103,7 @@ const PastOrder = () => {
         <ItemListFood
           rating={3}
           image={FoodDummy1}
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
           type="past-orders"
           items={4}
           price="100.000"
@@ -140,35 +114,14 @@ const PastOrder = () => {
         <ItemListFood
           rating={3}
           image={FoodDummy3}
-          onPress={() => navigation.navigate('FoodDetail')}
+          onPress={() => navigation.navigate('OrderDetail')}
           type="past-orders"
           items={4}
           price="100.000"
           foodName="Rujak"
           date="Jun 12, 14:00"
         />
-        <ItemListFood
-          rating={3}
-          image={FoodDummy2}
-          onPress={() => navigation.navigate('FoodDetail')}
-          type="past-orders"
-          items={4}
-          price="100.000"
-          foodName="Rujak"
-          date="Jun 12, 14:00"
-          status="Cancelled"
-        />
-        <ItemListFood
-          rating={3}
-          image={FoodDummy1}
-          onPress={() => navigation.navigate('FoodDetail')}
-          type="past-orders"
-          items={4}
-          price="100.000"
-          foodName="Rujak"
-          date="Jun 12, 14:00"
-          status="Cancelled"
-        />
+        
       </View>
     </ScrollView>
   );
