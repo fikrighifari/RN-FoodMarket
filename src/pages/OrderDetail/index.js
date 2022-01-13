@@ -1,12 +1,13 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {FoodDummy3} from '../../assets';
+import {Gap} from '../../components';
 import {Button} from '../../components/atoms';
 import {Header, ItemListFood, ItemValue} from '../../components/molecules';
 
 const OrderDetail = () => {
   return (
-    <View>
+    <ScrollView>
       <Header
         title={'Payment'}
         subTitle={'You deserve better meal'}
@@ -39,13 +40,22 @@ const OrderDetail = () => {
         <ItemValue label={'House No.'} value={'A5 Hook'} />
         <ItemValue label={'City'} value={'Bandung'} />
       </View>
-      <View style={styles.button}>
-        <Button
-          text={'Checkout Now'}
-          onPress={() => navigation.replace('SuccessOrder')}
-        />
+      <View style={styles.content}>
+        <Text style={styles.label}>Order Status: </Text>
+
+        <ItemValue label={'#FM209391'} value={'Paid'} valueColor="#1ABC9C" />
+
+        <View style={styles.button}>
+          <Button
+            text={'Cancel My Order'}
+            onPress={() => navigation.replace('SuccessOrder')}
+            color="#D9435E"
+            textColor="white"
+          />
+        </View>
+        <Gap height={40} />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 

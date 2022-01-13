@@ -1,12 +1,12 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {FoodDummy3} from '../../assets';
 import {Button} from '../../components/atoms';
 import {Header, ItemListFood, ItemValue} from '../../components/molecules';
 
 const OrderSummary = ({navigation}) => {
   return (
-    <View>
+    <ScrollView>
       <Header
         title={'Payment'}
         subTitle={'You deserve better meal'}
@@ -45,7 +45,7 @@ const OrderSummary = ({navigation}) => {
           onPress={() => navigation.replace('SuccessOrder')}
         />
       </View>
-    </View>
+    </ScrollView>
   );
 };
 
