@@ -46,6 +46,7 @@ const InProgress = () => {
           image={FoodDummy1}
           onPress={() => navigation.navigate('FoodDetail')}
           inProgress
+          type='in-progress'
           orderItems={4}
           totalOrder="100.000"
         />

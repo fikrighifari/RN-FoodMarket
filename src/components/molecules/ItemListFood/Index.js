@@ -10,22 +10,79 @@ const ItemListFood = ({
   inProgress,
   orderItems,
   totalOrder,
+  type,
 }) => {
+  const renderContent = () => {
+    switch (type) {
+      case 'product':
+        //List in Home Page
+        return (
+          <>
+            <View style={styles.content}>
+              <Text style={styles.foodTitle}>Smoothies Bowl</Text>
+              <Text style={styles.foodPrice}>IDR 50.0000</Text>
+            </View>
+            <Rating />
+          </>
+        );
+      case 'order-summary':
+        //List in Order Page
+        return (
+          <>
+            <View style={styles.content}>
+              <Text style={styles.foodTitle}>Smoothies Bowl</Text>
+              <Text style={styles.foodPrice}>IDR 50.0000</Text>
+            </View>
+            <Text style={styles.items}>{items} items</Text>
+          </>
+        );
+      case 'in-progress':
+        //List item in progress page
+        return (
+          <>
+            <View style={styles.content}>
+              <Text style={styles.foodTitle}>Smoothies Bowl</Text>
+              <Text style={styles.foodPrice}>
+                {orderItems} items • IDR {totalOrder}
+              </Text>
+            </View>
+          </>
+        );
+      case 'past-orders':
+        //List item in Past-Orders page
+        return (
+          <>
+            <View style={styles.content}>
+              <Text style={styles.foodTitle}>Smoothies Bowl</Text>
+              <Text style={styles.foodPrice}>
+                {orderItems} items • IDR {totalOrder}
+              </Text>
+            </View>
+            <View>
+              <Text>Tanggal</Text>
+              <Text>Status</Text>
+            </View>
+          </>
+        );
+      default:
+        //item product list
+        return (
+          <>
+            <View style={styles.content}>
+              <Text style={styles.foodTitle}>Smoothies Bowl</Text>
+              <Text style={styles.foodPrice}>IDR 50.0000</Text>
+            </View>
+            <Rating />
+          </>
+        );
+    }
+  };
+
   return (
     <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
       <View style={styles.container}>
         <Image source={image} style={styles.foodImage} />
-        <View style={{flex: 1}}>
-          <Text style={styles.foodTitle}>Smoothies Bowl</Text>
-          {inProgress ? (
-            <Text style={styles.foodPrice}>{orderItems} items • IDR {totalOrder}</Text>
-          ) : (
-            <Text style={styles.foodPrice}>IDR 50.0000</Text>
-          )}
-        </View>
-        {items && !rating && <Text style={styles.items}>{items} items</Text>}
-
-        {rating && !items && <Rating />}
+        {renderContent()}
       </View>
     </TouchableOpacity>
   );
@@ -39,6 +96,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingVertical: 8,
     alignItems: 'center',
+  },
+  content: {
+    flex: 1,
   },
   foodImage: {
     borderRadius: 8,
