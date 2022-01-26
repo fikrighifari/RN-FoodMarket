@@ -1,8 +1,9 @@
+import axios, {Axios} from 'axios';
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Button, Gap, TextInput} from '../../components';
 import Header from '../../components/molecules/Header';
-import { useForm } from '../../utils';
+import {useForm} from '../../utils';
 
 const SignIn = ({navigation}) => {
   // const [email, setEmail] = useState('');
@@ -10,11 +11,19 @@ const SignIn = ({navigation}) => {
   const [form, setForm] = useForm({
     email: '',
     password: '',
-  })
+  });
 
   const onSubmit = () => {
     console.log('form: ', form);
     // console.log('password: ', password);
+    axios
+      .post('http://foodmarket-backend.buildwithangga.id/api/login', form)
+      .then(res => {
+        console.log('Success', res);
+      })
+      .catch(err => {
+        console.log('error', err);
+      });
   };
 
   return (
@@ -25,14 +34,14 @@ const SignIn = ({navigation}) => {
           label={'Email Address'}
           placeHolder={'Type your email address'}
           value={form.email}
-          onChangeText={value => setForm('email',value)}
+          onChangeText={value => setForm('email', value)}
         />
         <Gap height={16} />
         <TextInput
           label={'Password'}
           placeHolder={'Type your password'}
           value={form.password}
-          onChangeText={value => setForm('password',value)}
+          onChangeText={value => setForm('password', value)}
           secureTextEntry
         />
         <Gap height={24} />
