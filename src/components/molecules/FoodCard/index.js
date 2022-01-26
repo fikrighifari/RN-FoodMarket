@@ -8,7 +8,7 @@ const FoodCard = ({image}) => {
     <View style={styles.container}>
       <Image source={image} style={styles.foodImage} />
       <View style={styles.content}>
-        <Text style={styles.foodTitle}>Christmas Candy</Text>
+        <Text style={styles.foodTitle}>Surabi Haneut</Text>
         <Rating/>
       </View>
     </View>
