@@ -22,7 +22,7 @@ const SignIn = ({navigation}) => {
         console.log('Success', res);
       })
       .catch(err => {
-        console.log('error', err);
+        // console.log('error', err);
       });
   };
 

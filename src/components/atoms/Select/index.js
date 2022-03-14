@@ -2,19 +2,22 @@ import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 
-const Select = ({label}) => {
+const Select = ({label, value, onSelectChange}) => {
   return (
     <View>
       <Text style={styles.label}>{label}</Text>
       <View style={styles.input}>
         <Picker
-        // selectedValue={selectedLanguage}
-        // onValueChange={(itemValue, itemIndex) =>
-        //   setSelectedLanguage(itemValue)
-        // }
-        >
-          <Picker.Item label="Java" value="java" />
-          <Picker.Item label="JavaScript" value="js" />
+          selectedValue={value}
+          onValueChange={(itemValue) =>
+            onSelectChange(itemValue)
+          }>
+          <Picker.Item label="Bandung" value="Bandung" />
+          <Picker.Item label="Jakarta" value="Jakarta" />
+          <Picker.Item label="Bekasi" value="Bekasi" />
+          <Picker.Item label="Tangerang" value="Tangerang" />
+          <Picker.Item label="Bogor" value="Bogor" />
+          <Picker.Item label="Kawarang" value="Karawang" />
         </Picker>
       </View>
     </View>
